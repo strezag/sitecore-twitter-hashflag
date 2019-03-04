@@ -1,0 +1,17 @@
+{
+"manifest_version": 2,
+    "name": "Sitecore Twitter Hashflag",
+    "description": "Adds Sitecore logo to #Sitecore tags on Twitter.",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.twitter.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
