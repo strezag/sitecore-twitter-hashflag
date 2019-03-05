@@ -140,6 +140,20 @@ var elements = document.getElementsByTagName('A');
                             }
                         }
 
+                        if (element.innerText.toLowerCase() == "#sxa") {
+                            if (element.nextSibling !== null) {
+                                if (element.textContent !== " ") {
+                                    if (element.nextSibling.href !== "https://twitter.com/hashtag/SXA?src=hash") {
+                                        var xmlString = "<span class=\"twitter-hashflag-container\"><a href=\"/hashtag/SXA?src=hash\" data-query-source=\"hashtag_click\" class=\"twitter-hashtag pretty-link js-nav\" dir=\"ltr\"><s>#</s><b>SXA</b></a><a href=\"/hashtag/SXA?src=hash\" dir=\"\"><img class=\"twitter-hashflag\" src=\"https://i.imgur.com/EVRiuIs.png\" draggable=\"false\" alt=\"\"></img></a></span>";
+
+                                        doc = new DOMParser().parseFromString(xmlString, "text/xml");
+
+                                        element.outerHTML = doc.firstChild.innerHTML;
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
             }
