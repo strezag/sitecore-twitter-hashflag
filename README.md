@@ -3,7 +3,10 @@ A lightweight Google Chrome extension that adds the Sitecore logo to #Sitecore t
 
 <img src="https://i.imgur.com/dYOPGGZ.png">
 
+
 ## Supported Hashtags
+<img src="https://i.imgur.com/jqQWpwW.png">
+
 - #Sitecore
 - #SitecoreMVP
 - #SitecoreJSS
