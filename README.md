@@ -1,5 +1,5 @@
 # Sitecore Twitter Hashflags 
-A lightweight Google Chrome extension that adds the Sitecore logo to #Sitecore tags on Twitter.
+A lightweight extension that adds Sitecore related hashflags to #Sitecore tags on Twitter.
 
 <img src="https://i.imgur.com/dYOPGGZ.png">
 
