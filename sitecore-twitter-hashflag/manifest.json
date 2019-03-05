@@ -1,5 +1,5 @@
 {
-"manifest_version": 1,
+"manifest_version": 2,
     "name": "Sitecore Twitter Hashflag",
     "description": "Lightweight extension that adds Sitecore related hashflags to #Sitecore tags on Twitter.",
     "version": "1.0",
