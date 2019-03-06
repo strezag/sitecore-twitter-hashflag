@@ -16,3 +16,4 @@ A lightweight extension that adds Sitecore related hashflags to #Sitecore tags o
 - #Coveo
 - #SUGCON
 - #SitecoreSYM
+- #SXA
