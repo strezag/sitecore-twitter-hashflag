@@ -1,5 +1,7 @@
 var elements = document.getElementsByTagName('A');
 
+console.log('Sitecore Twitter Hashflags Enabled.')
+
 var htags = {
     "sitecore": "https://visualpharm.com/assets/411/Sitecore-595b40b85ba036ed117daa8d.svg",
     "sitecoremvp": "https://i.imgur.com/jSgScaz.png",
