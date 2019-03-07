@@ -1,5 +1,5 @@
 var elements = document.getElementsByTagName('A');
-
+var spanElements = document.getElementsByTagName('SPAN');
 console.log('Sitecore Twitter Hashflags Enabled.')
 
 var htags = {
@@ -63,6 +63,28 @@ if (window.location.hostname === "tweetdeck.twitter.com") {
                                                 element.outerHTML = doc.firstChild.innerHTML;
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // For quoeted Tweets
+            for (var i = 0; i < spanElements.length; i++) {
+                var element = spanElements[i];
+                if (element.nodeName == "SPAN") {
+                    if (element.className.startsWith("twitter-hashtag")) {
+                        for (var tag in htags) {
+                            if (element.innerText.toLowerCase() == "#" + tag) {
+                                if (element.nextSibling !== null) {
+                                    if (element.nextSibling.firstElementChild === undefined) {
+                                        var tmpCnt = element.textContent.substring(1);
+                                        var xmlString = "<a href=\"/hashtag/" + tmpCnt + "?src=hash\" dir=\"ltr\"><img class=\"twitter-hashflag\" src=\"" + htags[tag] + "\" draggable=\"false\" alt=\"\"></img></a>";
+
+                                        doc = new DOMParser().parseFromString(xmlString, "text/xml");
+                                        element.insertAdjacentHTML("afterend", doc.firstChild.outerHTML);
                                     }
                                 }
                             }
